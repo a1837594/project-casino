@@ -3,6 +3,10 @@
 #include "FnB_menu.h"
 using namespace std;
 
+FnB_menu::FnB_menu():name(""),stock(0),price(0){};
+
+FnB_menu::FnB_menu(std::string name,int stock, int price):name(this->name),stock(this->stock),price(this->price){};
+
 string FnB_menu::get_name(){
     return name;
 };
@@ -27,3 +31,5 @@ bool FnB_menu::change_stock(){//if stocks>0,return true
 int FnB_menu::get_nutrition_info(){
     return 0;
 };
+
+FnB_menu::~FnB_menu(){};
